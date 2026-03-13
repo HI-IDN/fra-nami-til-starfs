@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Beamer slides for the University of Iceland | fra-nami-til-starfs</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Beamer slides for the University of Iceland" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Kennsludagar – GitHub Classroom, PR vinnulag og samvinnudrifin kennsla" />
+<meta property="og:description" content="Kennsludagar – GitHub Classroom, PR vinnulag og samvinnudrifin kennsla" />
+<meta property="og:site_name" content="fra-nami-til-starfs" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Beamer slides for the University of Iceland" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Kennsludagar – GitHub Classroom, PR vinnulag og samvinnudrifin kennsla","headline":"Beamer slides for the University of Iceland","url":"/HI-LaTeX/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=925d78c0a21be265525234dd650ff9e3ea7dfb66">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="/">fra-nami-til-starfs</a></h1>
+      
+
+      <h1 id="beamer-slides-for-the-university-of-iceland">Beamer slides for the University of Iceland</h1>
+<p>This LaTeX class provides a custom Beamer theme for presentations related to the University of Iceland. You can easily set various parameters, including the title, author details, faculty name, seminar name, email, and more.</p>
+
+<h2 id="configuration-parameters">Configuration Parameters</h2>
+<p>The <code class="language-plaintext highlighter-rouge">hi-beamer</code> class offers a variety of parameters to customize your presentation:</p>
+
+<h3 id="required">Required</h3>
+<p>The following variables are mandatory to be set:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">NAME</code>: Name of the presenter.</li>
+  <li><code class="language-plaintext highlighter-rouge">TITLE</code>: Title of the presentation.</li>
+  <li><code class="language-plaintext highlighter-rouge">FACULTY</code>: Faculty or department associated with the presentation.</li>
+  <li><code class="language-plaintext highlighter-rouge">SEMINAR</code>: Name or title of the seminar or event.</li>
+  <li><code class="language-plaintext highlighter-rouge">EMAIL</code>: Email of the presenter.</li>
+</ul>
+
+<h3 id="optional">Optional</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">SUBTITLE</code>: Subtitle of the presentation. Default is empty.</li>
+  <li><code class="language-plaintext highlighter-rouge">DATE</code>: Date of the presentation. Default is the current date (<code class="language-plaintext highlighter-rouge">\today</code>).</li>
+  <li><code class="language-plaintext highlighter-rouge">WIDE</code>: To use a widescreen 16:9 aspect ratio, set this parameter to true. By default, the aspect ratio is 4:3.</li>
+  <li><code class="language-plaintext highlighter-rouge">ICELANDIC</code>: Toggle for Icelandic vs English logos. Set to true for Icelandic. Default is false, which uses the English version.</li>
+</ul>
+
+<h2 id="example-usage">Example Usage</h2>
+<p>Below is a generic example showing how to use this class:</p>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\documentclass</span>[
+    NAME=<span class="p">{</span>Dr. Your Name<span class="p">}</span>,
+    EMAIL=<span class="p">{</span>you@hi.is<span class="p">}</span>,
+    FACULTY=<span class="p">{</span>Your Department<span class="p">}</span>,
+    TITLE=<span class="p">{</span>Title of the Presentation<span class="p">}</span>,
+    SUBTITLE=<span class="p">{</span>An additional subtitle if needed<span class="p">}</span>,
+    SEMINAR=<span class="p">{</span>Seminar Name<span class="p">}</span>,
+    DATE=<span class="p">{</span>Some Date<span class="p">}</span>
+]<span class="p">{</span>hi-LaTeX-slides/hi-beamer<span class="p">}</span>
+
+<span class="nt">\begin{document}</span>
+
+<span class="nt">\begin{frame}</span><span class="p">{</span>Introduction<span class="p">}</span>
+    Your content goes here.
+<span class="nt">\end{frame}</span>
+
+<span class="nt">\end{document}</span>
+</code></pre></div></div>
+<p>Please make sure that the repository or directory <code class="language-plaintext highlighter-rouge">hi-LaTeX-slides</code> is accessible from the location of your <code class="language-plaintext highlighter-rouge">.tex</code> file.</p>
+
+<p>The above example will produce the following slides:</p>
+
+<p><img src="/HI-LaTeX/example-titleframe.jpg" alt="Title frame" /></p>
+
+<p><img src="/HI-LaTeX/example-frame.jpg" alt="Slides" /></p>
+
+<h2 id="using-this-class-in-your-latex-document">Using this Class in Your LaTeX Document</h2>
+
+<p>For easy integration, it’s recommended to add this repository as a <strong>submodule</strong> in your project:</p>
+
+<ol>
+  <li>
+    <p>Navigate to your project’s root directory in the terminal or command prompt.</p>
+  </li>
+  <li>Run the following command to add the <code class="language-plaintext highlighter-rouge">hi-LaTeX-slides</code> repository as a submodule:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git submodule add git@github.com:tungufoss/hi-LaTeX-slides.git hi-LaTeX-slides
+</code></pre></div>    </div>
+  </li>
+  <li>To initialize, fetch and checkout the submodule, use:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> git submodule update <span class="nt">--init</span>
+</code></pre></div>    </div>
+  </li>
+  <li>When you clone your project repository later or if someone else clones your project, make sure to use the 
+<code class="language-plaintext highlighter-rouge">--recurse-submodules</code> option with <code class="language-plaintext highlighter-rouge">git clone</code> to ensure the submodule content is fetched too:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> git clone <span class="nt">--recurse-submodules</span> git@github.com/YourUserName/YourProjectRepo.git
+</code></pre></div>    </div>
+  </li>
+  <li>If you want to pull the latest changes from the <code class="language-plaintext highlighter-rouge">hi-LaTeX-slides</code> submodule later, navigate to the submodule directory and pull the changes:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">cd </span>hi-LaTeX-slides
+ git pull origin main
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h2 id="source">Source</h2>
+<p>This theme is built upon <a href="https://honnun.hi.is/5afb7ec03/p/654569-powerpoint-kynningar">this design guideline from the University of Iceland</a>
+and <a href="https://github.com/benediktmag/hi-latex-slides">Dr. Benedikt Magnússon</a>’s slide template on <a href="https://www.overleaf.com/latex/templates/hi-latex-slides/mpydjfsfmdcc">overleaf</a>.</p>
+
+<h2 id="feedback--contributions">Feedback &amp; Contributions</h2>
+<p>For any feedback, issues, or contributions, please submit a pull request or open an issue on this GitHub repository.</p>
+
+<h2 id="license">License</h2>
+<p>The contents of this repository are open-source. Please refer to the LICENSE file for more information.</p>
+
+
+      
+      <div class="footer border-top border-gray-light mt-5 pt-3 text-right text-gray">
+        This site is open source. <a href="https://github.com/HI-IDN/fra-nami-til-starfs/edit/gh-pages/HI-LaTeX/README.md">Improve this page</a>.
+      </div>
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+  </body>
+</html>
