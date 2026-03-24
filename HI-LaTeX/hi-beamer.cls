@@ -120,7 +120,7 @@
 \setbeamertemplate{title page}{
 \vspace{3cm}
 \colorbox{white}{
-        \begin{minipage}{0.6\textwidth}
+        \begin{minipage}{0.7\textwidth}
             \vspace*{0.1cm} % Adjust this for vertical padding
             \color{blue}\textbf{\large\inserttitle}
             \vspace*{0.1cm} % Adjust this for vertical padding
